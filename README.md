@@ -5,16 +5,6 @@ No more manually creating the manifest.xml file.
 No more manually specifying the DDF file.
 No more using the makecab.exe application.
 
-Before build:
-http://www.keutmann.dk/sharepointblog/wspbuilder/wspdemo.jpg
-
-Build:
-http://www.keutmann.dk/sharepointblog/wspbuilder/wspbuilderconsole.jpg
-
-After build:
-http://www.keutmann.dk/sharepointblog/wspbuilder/buildresult.jpg
-
-
 See also my blog on the project here http://keutmann.blogspot.com
 
 Last edited May 30, 2011 at 10:19 PM by keutmann, version 13
