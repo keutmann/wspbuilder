@@ -1,0 +1,39 @@
+<VSTemplate Version="2.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <Name>Web Part Without Feature</Name>
+    <Description>Add a new web part (80/wpcatalog)</Description>
+    <Icon Package="{E57322ED-C1F7-4ac5-955E-D790D474D39E}" ID="106" />
+    <ProjectType>VisualBasic</ProjectType>
+    <TemplateID>WebPart</TemplateID>
+    <ShowByDefault>true</ShowByDefault>
+    <SortOrder>6</SortOrder>
+    <DefaultName>WebPart</DefaultName>
+  </TemplateData>
+  <TemplateContent>
+    <References>
+      <Reference>
+        <Assembly>
+          System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+        </Assembly>
+      </Reference>
+      <Reference>
+        <Assembly>Microsoft.SharePoint, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL</Assembly>
+      </Reference>
+
+    </References>
+
+    <Folder Name="80">
+      <Folder Name="wpcatalog">
+        <ProjectItem SubType="Code" TargetFileName="$rootname$.webpart" ReplaceParameters="true">..\..\NewWebPart.webpart</ProjectItem>
+      </Folder>
+    </Folder>
+    <Folder Name="WebPartCode">
+        <ProjectItem SubType="Code" TargetFileName="$rootname$.vb" ReplaceParameters="true">..\NewWebPart.vb</ProjectItem>
+      </Folder>
+  </TemplateContent>
+  <WizardExtension>
+    <Assembly>WSPBuilderTemplates,Version=1.0.0.0, Culture=Neutral, PublicKeyToken=2b778c59697d7d9e</Assembly>
+    <FullClassName>WSPBuilderTemplates.DefaultWizard</FullClassName>
+  </WizardExtension>
+
+</VSTemplate>

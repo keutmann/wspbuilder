@@ -1,0 +1,43 @@
+<VSTemplate Version="2.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <Name>Feature with Receiver</Name>
+    <Description>Add a new feature with a feature receiver</Description>
+    <Icon Package="{E57322ED-C1F7-4ac5-955E-D790D474D39E}" ID="106" />
+    <ProjectType>VisualBasic</ProjectType>
+    <TemplateID>FeatureWithReceiver</TemplateID>
+    <ShowByDefault>true</ShowByDefault>
+    <SortOrder>6</SortOrder>
+    <DefaultName>FeatureWithReceiver</DefaultName>
+  </TemplateData>
+  <TemplateContent>
+    <References>
+      <Reference>
+        <Assembly>
+          System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+        </Assembly>
+      </Reference>
+      <Reference>
+        <Assembly>Microsoft.SharePoint, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL</Assembly>
+      </Reference>
+
+    </References>
+
+    <Folder Name="12">
+      <Folder Name="TEMPLATE">
+        <Folder Name="FEATURES">
+          <Folder Name="NewFeatureName">
+              <ProjectItem SubType="Code" TargetFileName="elements.xml" ReplaceParameters="true">..\..\..\..\elements.xml</ProjectItem>
+            <ProjectItem SubType="Code" TargetFileName="feature.xml" ReplaceParameters="true">..\..\..\..\feature.xml</ProjectItem>
+          </Folder>
+        </Folder>
+      </Folder>
+    </Folder>
+    <Folder Name="FeatureCode">
+      <ProjectItem SubType="Code" TargetFileName="$rootname$.vb" ReplaceParameters="true">..\NewFeatureReceiver.vb</ProjectItem>
+    </Folder>
+  </TemplateContent>
+  <WizardExtension>
+    <Assembly>WSPBuilderTemplates,Version=1.0.0.0, Culture=Neutral, PublicKeyToken=2b778c59697d7d9e</Assembly>
+    <FullClassName>WSPBuilderTemplates.DefaultFeatureWizard</FullClassName>
+  </WizardExtension>
+</VSTemplate>

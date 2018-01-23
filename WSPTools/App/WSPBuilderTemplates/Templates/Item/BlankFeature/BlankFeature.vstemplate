@@ -1,0 +1,21 @@
+<VSTemplate Version="2.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <Name>Blank Feature</Name>
+    <Description>Add a new feature</Description>
+    <Icon Package="{E57322ED-C1F7-4ac5-955E-D790D474D39E}" ID="106" />
+    <ProjectType>CSharp</ProjectType>
+    <TemplateID>BlankFeature</TemplateID>
+    <ShowByDefault>true</ShowByDefault>
+    <SortOrder>6</SortOrder>
+    <DefaultName>BlankFeature</DefaultName>
+  </TemplateData>
+  <TemplateContent>
+    <ProjectItem SubType="Code" TargetFileName="\$TargetPath$\elements.xml" ReplaceParameters="true">elements.xml</ProjectItem>
+    <ProjectItem SubType="Code" TargetFileName="\$TargetPath$\feature.xml" ReplaceParameters="true">feature.xml</ProjectItem>
+    <ProjectItem SubType="Code" TargetFileName="\$TargetPath$\$rootname$Receiver.cs" ReplaceParameters="true">ClassReceiver.cs</ProjectItem>
+  </TemplateContent>
+  <WizardExtension>
+    <Assembly>WSPBuilderTemplates, Version=1.0.0.0, Culture=neutral, PublicKeyToken=2b778c59697d7d9e</Assembly>
+    <FullClassName>WSPBuilderTemplates.DefaultFeatureWizard</FullClassName>
+  </WizardExtension>
+</VSTemplate>

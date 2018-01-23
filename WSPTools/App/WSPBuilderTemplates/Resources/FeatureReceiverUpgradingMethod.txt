@@ -1,0 +1,5 @@
+﻿        public override void FeatureUpgrading(SPFeatureReceiverProperties properties, string upgradeActionName, IDictionary<string, string> parameters)
+        {
+            base.FeatureUpgrading(properties, upgradeActionName, parameters);
+            $CodeContent$
+        }

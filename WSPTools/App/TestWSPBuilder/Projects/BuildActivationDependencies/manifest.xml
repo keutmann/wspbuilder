@@ -1,0 +1,7 @@
+﻿<?xml version="1.0"?>
+<!-- Solution created by WSPBuilder. 12-10-2009 23:35:04 * Solution compatibility: SharePoint 3.0 and 4.0 -->
+<Solution SolutionId="dca6dcbb-4536-44bf-a6bd-c2f3801ffdbf" xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ActivationDependencies>
+    <ActivationDependency SolutionId="dca6dcbb-4536-44bf-a6bd-c2f3801ffdbf" SolutionName="Test" />
+  </ActivationDependencies>
+</Solution>

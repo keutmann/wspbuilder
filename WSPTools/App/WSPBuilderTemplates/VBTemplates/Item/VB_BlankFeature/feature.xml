@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Feature  Id="$featureid$"
+          Title="$featuretitle$"
+          Description="$featuredesc$"
+          Version="12.0.0.0"
+          Hidden="FALSE"
+          Scope="$featurescope$"
+          DefaultResourceFile="core"
+          xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ElementManifests>
+    <ElementManifest Location="elements.xml"/>    
+  </ElementManifests>
+</Feature>

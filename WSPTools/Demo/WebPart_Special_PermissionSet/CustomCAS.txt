@@ -1,0 +1,3 @@
+<IPermission class="System.Security.Permissions.FileIOPermission, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Unrestricted="True" version="1" Read="C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\12\TEMPLATE\CONTROLTEMPLATES\MyCustomControl.ascx" Write="$AppDir$" Append="$AppDir$" PathDiscovery="$AppDir$" />
+<IPermission class="AspNetHostingPermission" version="1" Level="Medium" />
+<IPermission class="System.Net.Mail.SmtpPermission, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Access="Connect" />

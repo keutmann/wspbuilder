@@ -1,0 +1,28 @@
+<VSTemplate Version="2.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <Name>Web Part</Name>
+    <Description>Add a new feature that deploys a web part</Description>
+    <Icon Package="{E57322ED-C1F7-4ac5-955E-D790D474D39E}" ID="106" />
+    <ProjectType>CSharp</ProjectType>
+    <TemplateID>WebPartFeature</TemplateID>
+    <ShowByDefault>true</ShowByDefault>
+    <SortOrder>6</SortOrder>
+    <DefaultName>WebPartFeature</DefaultName>
+  </TemplateData>
+  <TemplateContent>
+    <References>
+      <Reference>
+        <Assembly>System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Assembly>
+      </Reference>
+    </References>
+    <ProjectItem SubType="" TargetFileName="\$TargetPath$\elements.xml" ReplaceParameters="true">elements.xml</ProjectItem>
+    <ProjectItem SubType="" TargetFileName="\$TargetPath$\feature.xml" ReplaceParameters="true">feature.xml</ProjectItem>
+    <ProjectItem SubType="" TargetFileName="\$TargetPath$\$rootname$.webpart" ReplaceParameters="true">NewWebPart.webpart</ProjectItem>
+    <ProjectItem SubType="Code" TargetFileName="\$TargetPath$\$rootname$WebPart.cs" ReplaceParameters="true">NewWebPart.cs</ProjectItem>
+    <ProjectItem SubType="Code" TargetFileName="\$TargetPath$\$rootname$Receiver.cs" ReplaceParameters="true">ClassReceiver.cs</ProjectItem>
+  </TemplateContent>
+  <WizardExtension>
+    <Assembly>WSPBuilderTemplates,Version=1.0.0.0, Culture=Neutral, PublicKeyToken=2b778c59697d7d9e</Assembly>
+    <FullClassName>WSPBuilderTemplates.WebPartWizard</FullClassName>
+  </WizardExtension>
+</VSTemplate>

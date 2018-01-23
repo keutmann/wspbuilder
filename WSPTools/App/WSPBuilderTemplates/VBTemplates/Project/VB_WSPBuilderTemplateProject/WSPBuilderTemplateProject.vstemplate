@@ -1,0 +1,22 @@
+<VSTemplate Version="2.0.0" Type="Project" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <Name>WSPBuilder Template Project</Name>
+    <Description>Create a project for creating WSPBuilder Templates</Description>
+	<Icon Package="{164B10B9-B200-11D0-8C61-00A0C91E29D5}" ID="4502" />
+    <ProjectType>VisualBasic</ProjectType>
+    <SortOrder>20</SortOrder>
+    <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>WSPBuilderTemplateProject</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+  </TemplateData>
+  <TemplateContent>
+    <Project File="WSPBuilderTemplateProject.vbproj" ReplaceParameters="true">
+      <ProjectItem ReplaceParameters="true" TargetFileName="Properties\AssemblyInfo.vb">AssemblyInfo.vb</ProjectItem>
+    </Project>
+  </TemplateContent>
+  <WizardExtension>
+    <Assembly>WSPBuilderTemplates, Version=1.0.0.0, Culture=neutral, PublicKeyToken=2b778c59697d7d9e</Assembly>
+    <FullClassName>WSPBuilderTemplates.ProjectWizardTemplate</FullClassName>
+  </WizardExtension>
+</VSTemplate>

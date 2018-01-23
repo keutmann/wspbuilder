@@ -1,0 +1,214 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectTypeGuids>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectGuid>{F8945C5A-B156-4A0C-98F3-A9F00D265F59}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Keutmann.SharePoint.WSPBuilder</RootNamespace>
+    <AssemblyName>WSPBuilder</AssemblyName>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>Properties\WSPTools.snk</AssemblyOriginatorKeyFile>
+    <StartupObject>
+    </StartupObject>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\BuildTools\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release Build x86|AnyCPU' ">
+    <OutputPath>..\Buildx86\</OutputPath>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release x64|AnyCPU' ">
+    <OutputPath>..\Buildx64\</OutputPath>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug VS Templates|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug VS Templates\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="cablib, Version=6.9.26.0, Culture=neutral, PublicKeyToken=85376ef9a48d191a, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Buildx64\cablib.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Program Files\Common Files\Microsoft Shared\Web Server Extensions\12\ISAPI\Microsoft.SharePoint.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Web.Administration, Version=7.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Windows\System32\inetsrv\Microsoft.Web.Administration.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Cecil, Version=0.6.8.8607, Culture=neutral, PublicKeyToken=eb8142a6d35291bc, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Framework\Commands\CommandParser.cs" />
+    <Compile Include="Framework\Commands\Attributes\Required.cs" />
+    <Compile Include="Framework\Commands\BaseCommand.cs" />
+    <Compile Include="Framework\Commands\ConsoleCommand.cs" />
+    <Compile Include="Commands\Extractwsp.cs" />
+    <Compile Include="Commands\Recycle.cs" />
+    <Compile Include="Framework\Commands\TraceLevelCommand.cs" />
+    <Compile Include="Commands\CopyToGAC.cs" />
+    <Compile Include="Framework\Commands\Help.cs" />
+    <Compile Include="Framework\Commands\ProgramInfo.cs" />
+    <Compile Include="Framework\IO\DirectorySystem.cs" />
+    <Compile Include="Framework\IO\FileSystem.cs" />
+    <Compile Include="Framework\Serialization\Formatter.cs" />
+    <Compile Include="Framework\Serialization\SPXmlTextWriter.cs" />
+    <Compile Include="Framework\Serialization\Validator.cs" />
+    <Compile Include="Framework\Serialization\XmlAttributeNewline.cs" />
+    <Compile Include="Library\AssemblyStore.cs" />
+    <Compile Include="Library\DLLType.cs" />
+    <Compile Include="Library\BuildMode.cs" />
+    <Compile Include="Library\CabHandler.cs" />
+    <Compile Include="Library\CustomAssemblyResolver.cs" />
+    <Compile Include="Library\Deployment.cs" />
+    <Compile Include="Library\ExceptionHandler.cs" />
+    <Compile Include="Library\Feature.cs" />
+    <Compile Include="Framework\IO\FileProvider.cs" />
+    <Compile Include="Library\Installer.cs" />
+    <Compile Include="Library\Log.cs" />
+    <Compile Include="Library\ArgumentParameters.cs" />
+    <Compile Include="Library\ManifestConfig.cs" />
+    <Compile Include="Library\SecurityClasses.cs" />
+    <Compile Include="Library\SolutionIdFile.cs" />
+    <Compile Include="Schema\ApplicationResourceFileDefinition.cs" />
+    <Compile Include="Schema\App_GlobalResourceFileDefinition.cs">
+      <SubType>code</SubType>
+    </Compile>
+    <Compile Include="Schema\AssemblyFileReference.cs" />
+    <Compile Include="Schema\DwpFileDefinition.cs" />
+    <Compile Include="Schema\FeatureManifestReference.cs" />
+    <Compile Include="Schema\PermissionSetLevel.cs" />
+    <Compile Include="Framework\Serialization\Serializer.cs" />
+    <Compile Include="Library\WSPFolders.cs" />
+    <Compile Include="Library\Config.cs" />
+    <Compile Include="Library\Help.cs" />
+    <Compile Include="Library\SPPaths.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Schema\ResourceDefinition.cs" />
+    <Compile Include="Schema\RootFileReference.cs" />
+    <Compile Include="Schema\SafeControlDefinition.cs" />
+    <Compile Include="Schema\SiteDefinitionManifestFileReference.cs" />
+    <Compile Include="Schema\Solution.cs" />
+    <Compile Include="Schema\TemplateFileReference.cs" />
+    <Compile Include="Schema\wss.cs" />
+    <Compile Include="SystemServices\AssemblyNames.cs" />
+    <Compile Include="SystemServices\IIServerManager.cs" />
+    <Compile Include="SystemServices\AssemblyCache.cs" />
+    <Compile Include="SystemServices\GACErrorCodes.cs" />
+    <Compile Include="WSP\ApplicationResourceFileDefinition.cs" />
+    <Compile Include="WSP\AssemblyFileReference.cs" />
+    <Compile Include="WSP\AssemblyInfo.cs" />
+    <Compile Include="WSP\BindingRedirectDefinition.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WSP\ClassResourceDefinition.cs" />
+    <Compile Include="WSP\DwpFileDefinition.cs" />
+    <Compile Include="WSP\FeatureManifestReference.cs" />
+    <Compile Include="WSP\PolicyItemDefinition.cs" />
+    <Compile Include="WSP\ReplaceableParameters.cs" />
+    <Compile Include="WSP\ResourceDefinition.cs" />
+    <Compile Include="WSP\RootFileReference.cs" />
+    <Compile Include="WSP\SafeControlDefinition.cs" />
+    <Compile Include="WSP\SiteDefinitionManifestFileReference.cs" />
+    <Compile Include="WSP\SolutionHandler.cs" />
+    <Compile Include="WSP\TemplateFileReference.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Documentation\DDF Template.txt" />
+    <None Include="bin\Mono.Cecil.dll" />
+    <Content Include="Documentation\WSPBuilder Manual.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Documentation\License.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Documentation\WSPBuilder Readme.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="Properties\WSPTools.snk" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BaseLibrary\BaseLibrary.csproj">
+      <Project>{9287C788-109A-46C2-A787-6A1A96434728}</Project>
+      <Name>BaseLibrary</Name>
+      <Private>True</Private>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

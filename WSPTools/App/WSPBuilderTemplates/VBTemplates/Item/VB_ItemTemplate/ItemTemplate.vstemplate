@@ -1,0 +1,27 @@
+<VSTemplate Version="2.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <Name>Item Template</Name>
+    <Description>Add a new WSPBuilder Item template</Description>
+    <Icon Package="{E57322ED-C1F7-4ac5-955E-D790D474D39E}" ID="106" />
+    <ProjectType>VisualBasic</ProjectType>
+    <TemplateID>WSPBuilderItemTemplate</TemplateID>
+    <ShowByDefault>true</ShowByDefault>
+    <SortOrder>6</SortOrder>
+    <DefaultName>WSPBuilderItemTemplate</DefaultName>
+  </TemplateData>
+  <TemplateContent>
+
+    <Folder Name="Templates">
+      <Folder Name="ItemTemplates">
+        <Folder Name="NewItemTemplate">
+          <ProjectItem SubType="Code" TargetFileName="$rootname$._vstemplate" ReplaceParameters="true">..\..\..\NewItem._vstemplate</ProjectItem>
+        </Folder>
+      </Folder>
+    </Folder>
+  </TemplateContent>
+  <WizardExtension>
+    <Assembly>WSPBuilderTemplates,Version=1.0.0.0, Culture=Neutral, PublicKeyToken=2b778c59697d7d9e</Assembly>
+    <FullClassName>WSPBuilderTemplates.ItemTemplateWizard</FullClassName>
+  </WizardExtension>
+
+</VSTemplate>

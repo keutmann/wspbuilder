@@ -1,0 +1,26 @@
+;*** WSPBuilder Diamond Directive File
+; This file is not used in the program, see resources!
+;
+.OPTION EXPLICIT                  	; Generate errors on variable typos
+;
+.Set CabinetNameTemplate={0}	  	; The name of the WSP file
+.set DiskDirectoryTemplate=CDROM  	; All cabinets go in a single directory
+.Set CompressionType=MSZIP	    	; 
+.Set Cabinet=on				        ; 
+.Set Compress=on			        ;
+.Set DiskDirectory1=.          	    ; Use the specified directory for the output CAB file 
+;
+;*** Disable size limits for wsp (cab) files ;
+;
+.Set CabinetFileCountThreshold=0 
+.Set FolderFileCountThreshold=0 
+.Set FolderSizeThreshold=0 
+.Set MaxCabinetSize=0 
+.Set MaxDiskFileCount=0
+.Set MaxDiskSize=0
+;
+;*** Files to zip			        ;
+;
+{1}
+;
+;*** The end                    	; That's it

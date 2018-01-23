@@ -1,0 +1,5 @@
+The Cablib.dll has been build for x64 Systems. (IA64 not supported)
+
+The WSPBuilder and WSPDeploy has been build for any system.
+
+/keutmann

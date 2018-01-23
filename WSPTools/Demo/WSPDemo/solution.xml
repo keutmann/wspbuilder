@@ -1,0 +1,11 @@
+﻿<solution  id="07cfe21a-a761-4f93-ab0c-0e1033bd79f4" name="WSPDemo" >
+  <features>
+    <feature  id="1d295d14-5117-4091-9e96-8c12f0fbea8d" name="WSPDemo" title="WSPDemo" description="" version="1.0.0.0" scope="Site" hidden="False" defaultresourcefile="core" >
+      <element  id="1d295d14-5117-4091-9e96-8c12f0fbea8d" title="WSPDemo Web Part" description="" importerrormessage="Cannot import WSPDemo Web Part." />
+    </feature>
+  </features>
+  <templates>
+  </templates>
+  <sitedefinitions>
+  </sitedefinitions>
+</solution>

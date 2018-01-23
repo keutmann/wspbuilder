@@ -1,0 +1,291 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="DDFTemplate" xml:space="preserve">
+    <value>;*** WSPBuilder Diamond Directive File
+; 
+;
+.OPTION EXPLICIT                  	; Generate errors on variable typos
+;
+.Set CabinetNameTemplate={0}	  	; The name of the WSP file
+.set DiskDirectoryTemplate=CDROM  	; All cabinets go in a single directory
+.Set CompressionType=MSZIP	    	; 
+.Set Cabinet=on				        ; 
+.Set Compress=on			        ;
+.Set DiskDirectory1=.          	    ; Use the specified directory for the output CAB file 
+;
+;*** Disable size limits for wsp (cab) files ;
+;
+.Set CabinetFileCountThreshold=0 
+.Set FolderFileCountThreshold=0 
+.Set FolderSizeThreshold=0 
+.Set MaxCabinetSize=0 
+.Set MaxDiskFileCount=0
+.Set MaxDiskSize=0
+;
+;*** Files to zip			        ;
+;
+{1}
+;
+;*** The end                    	; That's it
+</value>
+    <comment>The Diamond Directive File template</comment>
+  </data>
+  <data name="Folders12" xml:space="preserve">
+    <value>/12
+/12/ADMISAPI
+/12/BIN
+/12/BIN/1033
+/12/CONFIG
+/12/CONFIG/ADMINBIN
+/12/CONFIG/AdminResources
+/12/CONFIG/BIN
+/12/CONFIG/Resources
+/12/CONFIG/UPGRADE
+/12/HCCab
+/12/HCCab/1033
+/12/Help
+/12/Help/1033
+/12/ISAPI
+/12/ISAPI/HELP
+/12/ISAPI/HELP/1033
+/12/ISAPI/HELP/1033/STS
+/12/ISAPI/HELP/1033/STS/IMAGES
+/12/ISAPI/_VTI_ADM
+/12/ISAPI/_VTI_AUT
+/12/LOGS
+/12/Resources
+/12/TEMPLATE
+/12/TEMPLATE/1030
+/12/TEMPLATE/1030/XML
+/12/TEMPLATE/1033
+/12/TEMPLATE/1033/STS
+/12/TEMPLATE/1033/STS/DOCTEMP
+/12/TEMPLATE/1033/STS/DOCTEMP/BLANKPGS
+/12/TEMPLATE/1033/STS/DOCTEMP/DCL
+/12/TEMPLATE/1033/STS/DOCTEMP/FP
+/12/TEMPLATE/1033/STS/DOCTEMP/ONENOTE
+/12/TEMPLATE/1033/STS/DOCTEMP/PPT
+/12/TEMPLATE/1033/STS/DOCTEMP/SMARTPGS
+/12/TEMPLATE/1033/STS/DOCTEMP/WORD
+/12/TEMPLATE/1033/STS/DOCTEMP/XL
+/12/TEMPLATE/1033/STS/DOCTEMP/XMLFORMS
+/12/TEMPLATE/1033/STS/DOCTEMP/XMLFORMS/BLANK
+/12/TEMPLATE/1033/Workflow
+/12/TEMPLATE/1033/XML
+/12/TEMPLATE/ADMIN
+/12/TEMPLATE/ADMIN/1033
+/12/TEMPLATE/ADMIN/1033/Policy
+/12/TEMPLATE/ADMIN/1033/Policy/Report
+/12/TEMPLATE/ADMIN/Content Deployment
+/12/TEMPLATE/ADMIN/SSO
+/12/TEMPLATE/CONTROLTEMPLATES
+/12/TEMPLATE/DocumentTemplates
+/12/TEMPLATE/FEATURES
+/12/TEMPLATE/GLOBAL
+/12/TEMPLATE/GLOBAL/Lists
+/12/TEMPLATE/GLOBAL/Lists/LISTTEMP
+/12/TEMPLATE/GLOBAL/Lists/MPLIB
+/12/TEMPLATE/GLOBAL/Lists/USERS
+/12/TEMPLATE/GLOBAL/Lists/WEBTEMP
+/12/TEMPLATE/GLOBAL/Lists/WPLIB
+/12/TEMPLATE/GLOBAL/XML
+/12/TEMPLATE/IMAGES
+/12/TEMPLATE/LAYOUTS
+/12/TEMPLATE/LAYOUTS/1033
+/12/TEMPLATE/LAYOUTS/1033/IMAGES
+/12/TEMPLATE/LAYOUTS/1033/STYLES
+/12/TEMPLATE/LAYOUTS/BDCAdminUI
+/12/TEMPLATE/LAYOUTS/EditingMenu
+/12/TEMPLATE/LAYOUTS/INC
+/12/TEMPLATE/LAYOUTS/INC/1033
+/12/TEMPLATE/LAYOUTS/MOBILE
+/12/TEMPLATE/LAYOUTS/STYLES
+/12/TEMPLATE/LAYOUTS/Variations
+/12/TEMPLATE/Pages
+/12/TEMPLATE/SiteTemplates
+/12/TEMPLATE/SQL
+/12/TEMPLATE/SQL/1033
+/12/TEMPLATE/SQL/OSRV
+/12/TEMPLATE/SQL/SPS
+/12/TEMPLATE/SQL/SPS/1033
+/12/TEMPLATE/THEMES
+/12/TEMPLATE/XML
+/12/TEMPLATE/XML/EXTENDED
+/12/TEMPLATE/XML/HELP</value>
+    <comment>All folders that goes into the 12 folder.</comment>
+  </data>
+  <data name="PermissionSetFull" xml:space="preserve">
+    <value>                        &lt;PermissionSet
+                                class="NamedPermissionSet"
+                                version="1"
+                                Unrestricted="true"
+                        /&gt;
+</value>
+  </data>
+  <data name="PermissionSetMedium" xml:space="preserve">
+    <value>&lt;PermissionSet class="NamedPermissionSet" version="1" Name="SPRestricted"&gt;
+              &lt;IPermission class="AspNetHostingPermission" version="1" Level="Medium" /&gt;
+              &lt;IPermission class="DnsPermission" version="1" Unrestricted="true" /&gt;
+              &lt;IPermission class="EnvironmentPermission" version="1" Read="TEMP;TMP;USERNAME;OS;COMPUTERNAME" /&gt;
+              &lt;IPermission class="FileIOPermission" version="1" Read="$AppDir$" Write="$AppDir$" Append="$AppDir$" PathDiscovery="$AppDir$" /&gt;
+              &lt;IPermission class="IsolatedStorageFilePermission" version="1" Allowed="AssemblyIsolationByUser" UserQuota="9223372036854775807" /&gt;
+              &lt;IPermission class="PrintingPermission" version="1" Level="DefaultPrinting" /&gt;
+              &lt;IPermission class="SecurityPermission" version="1" Flags="Assertion, Execution, ControlThread, ControlPrincipal, RemotingConfiguration" /&gt;
+              &lt;IPermission class="SharePointPermission" version="1" ObjectModel="True" /&gt;
+              &lt;IPermission class="SmtpPermission" version="1" Access="Connect" /&gt;
+              &lt;IPermission class="SqlClientPermission" version="1" Unrestricted="true" /&gt;
+              &lt;IPermission class="WebPartPermission" version="1" Connections="True" /&gt;
+              &lt;IPermission class="WebPermission" version="1"&gt;
+                &lt;ConnectAccess&gt;
+                  &lt;URI uri="$OriginHost$" /&gt;
+                &lt;/ConnectAccess&gt;
+              &lt;/IPermission&gt;
+            &lt;/PermissionSet&gt;</value>
+    <comment>Standard PermissionSet for assemblies that have no Permissions defined.</comment>
+  </data>
+  <data name="PermissionSetMinimal" xml:space="preserve">
+    <value>                        &lt;PermissionSet
+                                class="NamedPermissionSet"
+                                version="1"
+                                Name="SPRestricted"&gt;
+                            &lt;IPermission 
+                                    class="AspNetHostingPermission"
+                                    version="1"
+                                    Level="Minimal"
+                            /&gt;
+                            &lt;IPermission 
+                                    class="SecurityPermission"
+                                    version="1"
+                                    Flags="Execution"
+                            /&gt;
+                            &lt;IPermission class="WebPartPermission"
+                                    version="1"
+                                    Connections="True"
+                            /&gt;
+                        &lt;/PermissionSet&gt;</value>
+  </data>
+  <data name="PermissionSetNone" xml:space="preserve">
+    <value>                        &lt;PermissionSet      
+                                class="NamedPermissionSet"
+                                version="1"
+						/&gt;
+</value>
+  </data>
+</root>

@@ -1,0 +1,5 @@
+﻿            if (properties.Feature.Parent is SPSite)
+            {
+                SPSite site = (SPSite)properties.Feature.Parent;
+                $CodeContent$
+            }

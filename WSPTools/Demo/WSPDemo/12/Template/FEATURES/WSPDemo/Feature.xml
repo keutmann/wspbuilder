@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Feature Id="209d7c38-c044-486b-8db4-d24192080d62" 
+Title="WSPDemo"
+Description="This feature adds a WSPDemo command in the Actions menu for Windows SharePoint Services lists."
+Version="1.0.0.0"
+Scope="Site"
+xmlns="http://schemas.microsoft.com/sharepoint/">
+	<ElementManifests>
+		<ElementManifest Location="Elements.xml" />
+		<ElementFile Location="Test2.txt" />
+	</ElementManifests>
+</Feature>
+

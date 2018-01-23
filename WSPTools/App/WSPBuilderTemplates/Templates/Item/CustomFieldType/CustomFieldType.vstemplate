@@ -1,0 +1,50 @@
+<VSTemplate Version="2.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <Name>Custom Field Type</Name>
+    <Description>Add a new field type and control</Description>
+    <Icon Package="{E57322ED-C1F7-4ac5-955E-D790D474D39E}" ID="106" />
+    <ProjectType>CSharp</ProjectType>
+    <TemplateID>CustomFieldType</TemplateID>
+    <ShowByDefault>true</ShowByDefault>
+    <SortOrder>6</SortOrder>
+    <DefaultName>CustomFieldType</DefaultName>
+  </TemplateData>
+  <TemplateContent>
+    <References>
+      <Reference>
+        <Assembly>
+          System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+        </Assembly>
+      </Reference>
+      <Reference>
+        <Assembly>Microsoft.SharePoint</Assembly>
+      </Reference>
+
+    </References>
+
+    <Folder Name="SharePointRoot">
+      <Folder Name="TEMPLATE">
+        <Folder Name="XML">
+          <ProjectItem SubType="Code" TargetFileName="fldtypes_$rootname$.xml" ReplaceParameters="true">..\..\..\NewCustomField.xml</ProjectItem>
+        </Folder>
+      </Folder>
+    </Folder>
+    <Folder Name="SharePointRoot">
+      <Folder Name="TEMPLATE">
+        <Folder Name="CONTROLTEMPLATES">
+          <ProjectItem SubType="Code" TargetFileName="$rootname$FieldEditor.ascx" ReplaceParameters="true">..\..\..\NewCustomFieldEditor.ascx</ProjectItem>
+        </Folder>
+      </Folder>
+    </Folder>
+    <Folder Name="FieldTypeCode">
+      <ProjectItem SubType="Code" TargetFileName="$rootname$.cs" ReplaceParameters="true">..\NewCustomField.cs</ProjectItem>
+      <ProjectItem SubType="Code" TargetFileName="$rootname$Control.cs" ReplaceParameters="true">..\NewCustomFieldControl.cs</ProjectItem>
+      <ProjectItem SubType="Code" TargetFileName="$rootname$FieldEditor.cs" ReplaceParameters="true">..\NewCustomFieldEditor.cs</ProjectItem>
+    </Folder>
+  </TemplateContent>
+  <WizardExtension>
+    <Assembly>WSPBuilderTemplates,Version=1.0.0.0, Culture=Neutral, PublicKeyToken=2b778c59697d7d9e</Assembly>
+    <FullClassName>WSPBuilderTemplates.CustomFieldTypeWizard</FullClassName>
+  </WizardExtension>
+
+</VSTemplate>

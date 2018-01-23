@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<webParts>
+  <webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+    <metaData>
+      <type name="$DefaultNamespace$.$rootname$, $AssemblyName$, Version=$AssemblyVersion$, Culture=neutral, PublicKeyToken=$PublicKeyToken$" />
+      <importErrorMessage>Cannot import $featuretitle$ Web Part.</importErrorMessage>
+    </metaData>
+    <data>
+      <properties>
+        <property name="Title" type="string">$featuretitle$</property>
+        <property name="Description" type="string">$featuredesc$</property>
+      </properties>
+    </data>
+  </webPart>
+</webParts>

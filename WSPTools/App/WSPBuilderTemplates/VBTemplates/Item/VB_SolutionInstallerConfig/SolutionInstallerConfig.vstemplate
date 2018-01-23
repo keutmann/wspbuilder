@@ -1,0 +1,27 @@
+<VSTemplate Version="2.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <Name>Solution Installer Configuration</Name>
+    <Description>Add configuration files for the SharePoint Solution Installer that will be copied to the deployment folder</Description>
+    <Icon Package="{E57322ED-C1F7-4ac5-955E-D790D474D39E}" ID="106" />
+    <ProjectType>VisualBasic</ProjectType>
+    <TemplateID>WebPart</TemplateID>
+    <ShowByDefault>true</ShowByDefault>
+    <SortOrder>6</SortOrder>
+    <DefaultName>WebPart</DefaultName>
+  </TemplateData>
+  <TemplateContent>
+    <References>
+
+    </References>
+
+    <Folder Name="Deploy">
+        <ProjectItem SubType="Code" TargetFileName="EULA.rtf" ReplaceParameters="true">..\EULA.rtf</ProjectItem>
+        <ProjectItem SubType="Code" TargetFileName="Setup.exe.config" ReplaceParameters="true">..\Setup.exe.config</ProjectItem>
+      </Folder>
+  </TemplateContent>
+  <WizardExtension>
+    <Assembly>WSPBuilderTemplates,Version=1.0.0.0, Culture=Neutral, PublicKeyToken=2b778c59697d7d9e</Assembly>
+    <FullClassName>WSPBuilderTemplates.DefaultWizard</FullClassName>
+  </WizardExtension>
+
+</VSTemplate>

@@ -1,0 +1,6 @@
+﻿            if (properties.Feature.Parent is SPWeb)
+            {
+                SPWeb web = (SPWeb)properties.Feature.Parent;
+                SPSite site = web.Site;
+				$CodeContent$
+            }

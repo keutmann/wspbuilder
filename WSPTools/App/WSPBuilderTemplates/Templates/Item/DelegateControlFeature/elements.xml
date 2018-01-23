@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <!-- Use a sequence number lower than default of 100, so the custom control gets loaded before SharePoint controls -->
+  <Control Id="$DelegateControlID$" Sequence="90" ControlSrc="~/_ControlTemplates/$projectname$/$rootname$UserControl.ascx" />
+</Elements>

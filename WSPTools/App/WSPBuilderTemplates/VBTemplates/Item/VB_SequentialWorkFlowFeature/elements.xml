@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Workflow
+       Name="$rootname$"
+       Description="$featuredesc$"
+       Id="$guid1$"
+       CodeBesideClass="$DefaultNamespace$.$rootname$"
+       CodeBesideAssembly="$AssemblyName$, Version=$AssemblyVersion$, Culture=neutral, PublicKeyToken=$PublicKeyToken$"
+       TaskListContentTypeId="0x01080100C9C9515DE4E24001905074F980F93160"
+   AssociationUrl="_layouts/CstWrkflIP.aspx"
+       InstantiationUrl="_layouts/IniWrkflIP.aspx"
+       ModificationUrl="_layouts/ModWrkflIP.aspx"
+       StatusUrl="_layouts/WrkStat.aspx">
+
+    <Categories/>
+    <!-- Tags to specify InfoPath forms for the workflow; delete tags for forms that you do not have -->
+    <MetaData>
+ <!--     <Association_FormURN>associationFormURN</Association_FormURN>
+      <Instantiation_FormURN>instantiationFormURN</Instantiation_FormURN>
+      <Task0_FormURN>taskFormURN</Task0_FormURN>
+
+      <Modification_GUID_FormURN>modificationURN</Modification_GUID_FormURN>
+      <Modification_GUID_Name>Name of Modification</Modification_GUID_Name>
+-->
+      <AssociateOnActivation>false</AssociateOnActivation>
+    </MetaData>
+  </Workflow>
+</Elements>
+

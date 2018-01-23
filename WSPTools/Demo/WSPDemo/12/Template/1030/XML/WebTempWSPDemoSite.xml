@@ -1,0 +1,6 @@
+﻿<?xml version="1.0"?>
+<Templates xmlns:ows="Microsoft SharePoint">
+  <Template Name="WSPDemoSite" ID="20070606" >
+    <Configuration ID="0" Title="WSPDemo" Description="" Hidden="FALSE" ImageUrl="/_layouts/images/stsprev.png" DisplayCategory="Demo" />
+  </Template>
+</Templates>

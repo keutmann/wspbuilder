@@ -1,0 +1,329 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F6E2C780-18A5-41C2-902C-C8D0FF42F831}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TestWSPBuilder</RootNamespace>
+    <AssemblyName>TestWSPBuilder</AssemblyName>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug VS Templates|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug VS Templates\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.SharePoint, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL" />
+    <Reference Include="nunit.framework, Version=2.5.2.9222, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Library\SolutionHandler.cs" />
+    <Compile Include="Library\TestInvironment.cs" />
+    <Compile Include="Library\TestUtil.cs" />
+    <Compile Include="Library\WSPBuilderHanlder.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tests\BuildActivationDependencies.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Tests\BuildAppResources.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Tests\BuildFromSubFolder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Tests\BuildRootDLL.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Tests\BuildSolution.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Tests\BuildTemplate.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Tests\BuildWithReferences.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Tests\Commands\CopyToGAC.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Tests\Commands\Help.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Tests\ReplacementParameters.cs" />
+    <Compile Include="Tests\Manifest.Config.cs" />
+    <Compile Include="Tests\CreateFolders.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Tests\Deployment.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Tests\DLL80BinOnly.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Tests\PermissionSet.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Tests\SafeControls.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Tests\SatelliteAssemblies.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Tests\UnmanagedDLLs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Install\WSPBuilderCustomActions\WSPBuilderCustomActions.csproj">
+      <Project>{31D370EF-DC29-450B-AEB3-96D31AF97B6F}</Project>
+      <Name>WSPBuilderCustomActions</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WSPBuilder\WSPBuilder.csproj">
+      <Project>{F8945C5A-B156-4A0C-98F3-A9F00D265F59}</Project>
+      <Name>WSPBuilder</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Projects\BuildActivationDependencies\manifest.config" />
+    <None Include="Projects\Deployment\Test100.wsp" />
+    <None Include="Projects\Manifest.Config\MANIFEST.CONFIG" />
+    <None Include="Projects\SatelliteAssemblies\createDLL.bat" />
+    <None Include="Projects\SatelliteAssemblies\vscmd.bat" />
+    <None Include="Projects\SatelliteAssemblies\WSPTools.snk" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Projects\BuildAppResources\80\WPResources\WebPart\Dummy.txt" />
+    <Content Include="Projects\BuildFromSubFolder\80\Bin\WSPDemo.dll" />
+    <Content Include="Projects\BuildFromSubFolder\Bin\Debug\WSPDemo.dll" />
+    <Content Include="Projects\BuildFromSubFolder\Bin\Release\WSPDemo.dll" />
+    <Content Include="Projects\BuildFromSubFolder\GAC\WSPDemo.dll" />
+    <Content Include="Projects\BuildRootDLL\Dummy.dll" />
+    <Content Include="Projects\BuildSolution\Project1\12\DummyTestFile.txt" />
+    <Content Include="Projects\BuildSolution\Project1\12\DummyTestFile2.txt" />
+    <Content Include="Projects\BuildSolution\Project1\12\TEMPLATE\1033\XML\WebTempDummySite.xml" />
+    <Content Include="Projects\BuildSolution\Project1\12\TEMPLATE\CONTROLTEMPLATES\DummyUserControl.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Projects\BuildSolution\Project1\12\TEMPLATE\Features\DummyFeature\Elements.xml" />
+    <Content Include="Projects\BuildSolution\Project1\12\TEMPLATE\Features\DummyFeature\Feature.xml" />
+    <Content Include="Projects\BuildSolution\Project1\80\Bin\Dummy.dll" />
+    <Content Include="Projects\BuildSolution\Project1\80\Bin\Dummy.pdb" />
+    <Content Include="Projects\BuildSolution\Project1\80\Bin\WSPDemo.dll" />
+    <Content Include="Projects\BuildSolution\Project1\80\Resources\DummyTestFile.txt" />
+    <Content Include="Projects\BuildSolution\Project1\Bin\Debug\Dummy.dll" />
+    <Content Include="Projects\BuildSolution\Project1\Bin\Debug\Dummy.pdb" />
+    <Content Include="Projects\BuildSolution\Project1\GAC\Dummy.dll" />
+    <Content Include="Projects\BuildSolution\Project1\GAC\Dummy.pdb" />
+    <Content Include="Projects\BuildSolution\Project2\12\DummyTest2.txt" />
+    <Content Include="Projects\BuildSolution\Project2\12\DummyTestFile.txt" />
+    <Content Include="Projects\BuildSolution\Project2\12\TEMPLATE\1033\XML\WebTempDummySite.xml" />
+    <Content Include="Projects\BuildSolution\Project2\12\TEMPLATE\CONTROLTEMPLATES\DummyUserControl.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Projects\BuildSolution\Project2\12\TEMPLATE\Features\DummyFeature\Elements.xml" />
+    <Content Include="Projects\BuildSolution\Project2\12\TEMPLATE\Features\DummyFeature\Feature.xml" />
+    <Content Include="Projects\BuildSolution\Project2\80\Bin\Dummy.dll" />
+    <Content Include="Projects\BuildSolution\Project2\80\Resources\DummyTestFile.txt" />
+    <Content Include="Projects\BuildSolution\Project2\GAC\Dummy.dll" />
+    <Content Include="Projects\BuildTemplate\Template\1030\XML\WebTempWSPDemoSite.xml" />
+    <Content Include="Projects\BuildTemplate\Template\1033\XML\WebTempWSPDemoSite.xml" />
+    <Content Include="Projects\BuildTemplate\Template\FEATURES\WSPDemo\Elements.xml" />
+    <Content Include="Projects\BuildTemplate\Template\FEATURES\WSPDemo\Feature.xml" />
+    <Content Include="Projects\BuildTemplate\Template\FEATURES\WSPDemo\subfolder\test.txt" />
+    <Content Include="Projects\BuildTemplate\Template\FEATURES\WSPDemo\test2.txt" />
+    <Content Include="Projects\BuildTemplate\Template\LAYOUTS\WSPDemo.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Projects\BuildTemplate\Template\SiteTemplates\WSPDemoSite\default.aspx" />
+    <Content Include="Projects\BuildTemplate\Template\SiteTemplates\WSPDemoSite\xml\ONET.XML" />
+    <Content Include="Projects\BuildWithReferences\80\Bin\Reference\Dummy.dll" />
+    <Content Include="Projects\BuildWithReferences\80\Bin\WSPDemo.dll" />
+    <Content Include="Projects\BuildWithReferences\GAC\cablib.dll" />
+    <Content Include="Projects\BuildWithReferences\GAC\References\cablib.dll" />
+    <Content Include="Projects\CopyToGAC\Dummy.dll" />
+    <Content Include="Projects\DLL80BINOnly\80\Bin\WSPDemo.dll" />
+    <Content Include="Projects\Manifest.Config\GAC\Dummy.dll" />
+    <Content Include="Projects\PermissionSet\80\Bin\WebPart_Special_PermissionSet.dll" />
+    <Content Include="Projects\ReplacementParameters\GAC\Dummy.dll" />
+    <Content Include="Projects\ReplacementParameters\SharePointRoot\TEMPLATE\Features\DummyFeature\Elements.xml" />
+    <Content Include="Projects\ReplacementParameters\SharePointRoot\TEMPLATE\Features\DummyFeature\Feature.xml" />
+    <Content Include="Projects\SafeControls\GAC\Dummy.dll" />
+    <Content Include="Projects\SafeControls\GAC\Dummy.pdb" />
+    <Content Include="Projects\SatelliteAssemblies\80\Bin\Dummy.dll" />
+    <Content Include="Projects\SatelliteAssemblies\80\Bin\fr-FR\Dummy.Resources.DLL">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Projects\SatelliteAssemblies\GAC\da-DK\Dummy.Resources.DLL">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Projects\SatelliteAssemblies\GAC\da-DK\WSPDemo.Resources.DLL" />
+    <Content Include="Projects\SatelliteAssemblies\GAC\en-GB\WSPDemo.resources.dll" />
+    <Content Include="Projects\SatelliteAssemblies\GAC\WSPDemo.dll" />
+    <Content Include="Projects\UnmanagedDLLs\80\Bin\Unmanaged.DLL">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Projects\UnmanagedDLLs\GAC\Unmanaged.DLL">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Projects\BuildAppResources\80\App_GlobalResources\dummy1.resx" />
+    <EmbeddedResource Include="Projects\BuildAppResources\80\App_GlobalResources\dummy2.resx" />
+    <EmbeddedResource Include="Projects\BuildAppResources\80\App_GlobalResources\dummy3.resx" />
+    <EmbeddedResource Include="Projects\SatelliteAssemblies\Resource1.resources" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Projects\BuildSolution\CustomDLLFolder\" />
+    <Folder Include="Projects\BuildSolution\GAC\" />
+    <Folder Include="Projects\BuildSolution\Project1\12\TEMPLATE\SiteTemplates\DummySite\" />
+    <Folder Include="Projects\BuildSolution\Project2\12\TEMPLATE\SiteTemplates\DummySite\" />
+    <Folder Include="Projects\CreateFolders\12\ADMISAPI\" />
+    <Folder Include="Projects\CreateFolders\12\BIN\1033\" />
+    <Folder Include="Projects\CreateFolders\12\CONFIG\ADMINBIN\" />
+    <Folder Include="Projects\CreateFolders\12\CONFIG\AdminResources\" />
+    <Folder Include="Projects\CreateFolders\12\CONFIG\BIN\" />
+    <Folder Include="Projects\CreateFolders\12\CONFIG\Resources\" />
+    <Folder Include="Projects\CreateFolders\12\CONFIG\UPGRADE\" />
+    <Folder Include="Projects\CreateFolders\12\HCCab\1033\" />
+    <Folder Include="Projects\CreateFolders\12\Help\1033\" />
+    <Folder Include="Projects\CreateFolders\12\ISAPI\HELP\1033\STS\IMAGES\" />
+    <Folder Include="Projects\CreateFolders\12\ISAPI\_VTI_ADM\" />
+    <Folder Include="Projects\CreateFolders\12\ISAPI\_VTI_AUT\" />
+    <Folder Include="Projects\CreateFolders\12\LOGS\" />
+    <Folder Include="Projects\CreateFolders\12\Resources\" />
+    <Folder Include="Projects\CreateFolders\12\TEMPLATE\1030\XML\" />
+    <Folder Include="Projects\CreateFolders\12\TEMPLATE\1033\STS\DOCTEMP\BLANKPGS\" />
+    <Folder Include="Projects\CreateFolders\12\TEMPLATE\1033\STS\DOCTEMP\DCL\" />
+    <Folder Include="Projects\CreateFolders\12\TEMPLATE\1033\STS\DOCTEMP\FP\" />
+    <Folder Include="Projects\CreateFolders\12\TEMPLATE\1033\STS\DOCTEMP\ONENOTE\" />
+    <Folder Include="Projects\CreateFolders\12\TEMPLATE\1033\STS\DOCTEMP\PPT\" />
+    <Folder Include="Projects\CreateFolders\12\TEMPLATE\1033\STS\DOCTEMP\SMARTPGS\" />
+    <Folder Include="Projects\CreateFolders\12\TEMPLATE\1033\STS\DOCTEMP\WORD\" />
+    <Folder Include="Projects\CreateFolders\12\TEMPLATE\1033\STS\DOCTEMP\XL\" />
+    <Folder Include="Projects\CreateFolders\12\TEMPLATE\1033\STS\DOCTEMP\XMLFORMS\BLANK\" />
+    <Folder Include="Projects\CreateFolders\12\TEMPLATE\1033\Workflow\" />
+    <Folder Include="Projects\CreateFolders\12\TEMPLATE\1033\XML\" />
+    <Folder Include="Projects\CreateFolders\12\TEMPLATE\ADMIN\1033\Policy\Report\" />
+    <Folder Include="Projects\CreateFolders\12\TEMPLATE\ADMIN\Content Deployment\" />
+    <Folder Include="Projects\CreateFolders\12\TEMPLATE\ADMIN\SSO\" />
+    <Folder Include="Projects\CreateFolders\12\TEMPLATE\CONTROLTEMPLATES\" />
+    <Folder Include="Projects\CreateFolders\12\TEMPLATE\DocumentTemplates\" />
+    <Folder Include="Projects\CreateFolders\12\TEMPLATE\FEATURES\" />
+    <Folder Include="Projects\CreateFolders\12\TEMPLATE\GLOBAL\Lists\LISTTEMP\" />
+    <Folder Include="Projects\CreateFolders\12\TEMPLATE\GLOBAL\Lists\MPLIB\" />
+    <Folder Include="Projects\CreateFolders\12\TEMPLATE\GLOBAL\Lists\USERS\" />
+    <Folder Include="Projects\CreateFolders\12\TEMPLATE\GLOBAL\Lists\WEBTEMP\" />
+    <Folder Include="Projects\CreateFolders\12\TEMPLATE\GLOBAL\Lists\WPLIB\" />
+    <Folder Include="Projects\CreateFolders\12\TEMPLATE\GLOBAL\XML\" />
+    <Folder Include="Projects\CreateFolders\12\TEMPLATE\IMAGES\" />
+    <Folder Include="Projects\CreateFolders\12\TEMPLATE\LAYOUTS\1033\IMAGES\" />
+    <Folder Include="Projects\CreateFolders\12\TEMPLATE\LAYOUTS\1033\STYLES\" />
+    <Folder Include="Projects\CreateFolders\12\TEMPLATE\LAYOUTS\BDCAdminUI\" />
+    <Folder Include="Projects\CreateFolders\12\TEMPLATE\LAYOUTS\EditingMenu\" />
+    <Folder Include="Projects\CreateFolders\12\TEMPLATE\LAYOUTS\INC\1033\" />
+    <Folder Include="Projects\CreateFolders\12\TEMPLATE\LAYOUTS\MOBILE\" />
+    <Folder Include="Projects\CreateFolders\12\TEMPLATE\LAYOUTS\STYLES\" />
+    <Folder Include="Projects\CreateFolders\12\TEMPLATE\LAYOUTS\Variations\" />
+    <Folder Include="Projects\CreateFolders\12\TEMPLATE\Pages\" />
+    <Folder Include="Projects\CreateFolders\12\TEMPLATE\SiteTemplates\" />
+    <Folder Include="Projects\CreateFolders\12\TEMPLATE\SQL\1033\" />
+    <Folder Include="Projects\CreateFolders\12\TEMPLATE\SQL\OSRV\" />
+    <Folder Include="Projects\CreateFolders\12\TEMPLATE\SQL\SPS\1033\" />
+    <Folder Include="Projects\CreateFolders\12\TEMPLATE\THEMES\" />
+    <Folder Include="Projects\CreateFolders\12\TEMPLATE\XML\EXTENDED\" />
+    <Folder Include="Projects\CreateFolders\12\TEMPLATE\XML\HELP\" />
+    <Folder Include="Projects\CreateFolders\80\bin\" />
+    <Folder Include="Projects\CreateFolders\80\wpcatalog\" />
+    <Folder Include="Projects\CreateFolders\80\wpresources\" />
+    <Folder Include="Projects\CreateFolders\GAC\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

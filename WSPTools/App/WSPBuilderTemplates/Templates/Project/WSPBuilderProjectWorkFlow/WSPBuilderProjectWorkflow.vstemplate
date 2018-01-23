@@ -1,0 +1,24 @@
+<VSTemplate Version="2.0.0" Type="Project" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <Name>WSPBuilder Project with Workflow</Name>
+    <Description>Create a solution package with WSPBuilder</Description>
+    <Icon Package="{FAE04EC1-301F-11d3-BF4B-00C04F79EFBC}" ID="4547" />
+    <ProjectType>CSharp</ProjectType>
+    <SortOrder>20</SortOrder>
+    <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>WSPBuilderProject</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+  </TemplateData>
+  <TemplateContent>
+    <Project File="WSPBuilderProjectWorkflow.csproj" ReplaceParameters="true">
+      <ProjectItem ReplaceParameters="true" TargetFileName="Properties\AssemblyInfo.cs">AssemblyInfo.cs</ProjectItem>
+      <Folder Name="SharePointRoot"></Folder>
+      <Folder Name="GAC"></Folder>
+    </Project>
+  </TemplateContent>
+  <WizardExtension>
+    <Assembly>WSPBuilderTemplates, Version=1.0.0.0, Culture=neutral, PublicKeyToken=2b778c59697d7d9e</Assembly>
+    <FullClassName>WSPBuilderTemplates.ProjectWizardWorkflow</FullClassName>
+  </WizardExtension>
+</VSTemplate>

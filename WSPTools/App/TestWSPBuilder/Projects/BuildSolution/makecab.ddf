@@ -1,0 +1,36 @@
+﻿;*** WSPBuilder Diamond Directive File
+; 
+;
+.OPTION EXPLICIT                  	; Generate errors on variable typos
+;
+.Set CabinetNameTemplate=BuildSolution.wsp	  	; The name of the WSP file
+.set DiskDirectoryTemplate=CDROM  	; All cabinets go in a single directory
+.Set CompressionType=MSZIP	    	; 
+.Set Cabinet=on				        ; 
+.Set Compress=on			        ;
+.Set DiskDirectory1=.          	    ; Use the specified directory for the output CAB file 
+;
+;*** Disable size limits for wsp (cab) files ;
+;
+.Set CabinetFileCountThreshold=0 
+.Set FolderFileCountThreshold=0 
+.Set FolderSizeThreshold=0 
+.Set MaxCabinetSize=0 
+.Set MaxDiskFileCount=0
+.Set MaxDiskSize=0
+;
+;*** Files to zip			        ;
+;
+"C:\Projects\WSPTools\App\TestWSPBuilder\projects\BuildSolution\Project1\12\DummyTestFile.txt" "DummyTestFile.txt"
+"C:\Projects\WSPTools\App\TestWSPBuilder\projects\BuildSolution\Project1\12\DummyTestFile2.txt" "DummyTestFile2.txt"
+"C:\Projects\WSPTools\App\TestWSPBuilder\projects\BuildSolution\Project1\12\template\features\DummyFeature\Elements.xml" "DummyFeature\Elements.xml"
+"C:\Projects\WSPTools\App\TestWSPBuilder\projects\BuildSolution\Project1\12\template\features\DummyFeature\Feature.xml" "DummyFeature\Feature.xml"
+"C:\Projects\WSPTools\App\TestWSPBuilder\projects\BuildSolution\Project1\12\template\1033\XML\WebTempDummySite.xml" "1033\XML\WebTempDummySite.xml"
+"C:\Projects\WSPTools\App\TestWSPBuilder\projects\BuildSolution\Project1\12\template\CONTROLTEMPLATES\DummyUserControl.ascx" "CONTROLTEMPLATES\DummyUserControl.ascx"
+"C:\Projects\WSPTools\App\TestWSPBuilder\projects\BuildSolution\Project2\12\DummyTest2.txt" "DummyTest2.txt"
+"C:\Projects\WSPTools\App\TestWSPBuilder\projects\BuildSolution\Project2\GAC\Dummy.dll" "Dummy.dll"
+"C:\Projects\WSPTools\App\TestWSPBuilder\projects\BuildSolution\Project1\80\Bin\WSPDemo.dll" "WSPDemo.dll"
+"C:\Projects\WSPTools\App\TestWSPBuilder\projects\BuildSolution\manifest.xml" "manifest.xml"
+
+;
+;*** The end                    	; That's it

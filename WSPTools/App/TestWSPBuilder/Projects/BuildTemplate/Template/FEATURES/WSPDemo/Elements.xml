@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+	<CustomAction Id="c1376d72-c4a3-4aaa-980d-58dac97a22a9"
+	  GroupId="SiteAdministration"
+	  Location="Microsoft.SharePoint.SiteSettings"
+	  Sequence="1000"
+    Title="Hello World - WSPDemo"
+	  Description="Hello World - WSPDemo page.">
+		<UrlAction Url="~site/_layouts/wspdemo.aspx"/>
+	</CustomAction>
+</Elements>

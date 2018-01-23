@@ -1,0 +1,30 @@
+<VSTemplate Version="2.0.0" Type="Project" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <Name>WSPBuilder Project</Name>
+    <Description>Create a solution package with WSPBuilder</Description>
+	<Icon Package="{164B10B9-B200-11D0-8C61-00A0C91E29D5}" ID="4502" />
+    <ProjectType>VisualBasic</ProjectType>
+    <SortOrder>20</SortOrder>
+    <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>WSPBuilderProject</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+  </TemplateData>
+  <TemplateContent>
+    <Project File="WSPBuilderProject.vbproj" ReplaceParameters="true">
+      <ProjectItem ReplaceParameters="true">solutionid.txt</ProjectItem>
+      <ProjectItem ReplaceParameters="true"  TargetFileName="My Project\AssemblyInfo.vb">AssemblyInfo.vb</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="My Project\Application.myapp">MyApplication.myapp</ProjectItem>
+      <ProjectItem ReplaceParameters="true"  TargetFileName="My Project\Application.Designer.vb">MyApplication.Designer.vb</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="My Project\Resources.resx">Resources.resx</ProjectItem>
+      <ProjectItem ReplaceParameters="true"  TargetFileName="My Project\Resources.Designer.vb">Resources.Designer.vb</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="My Project\Settings.settings">Settings.settings</ProjectItem>
+      <ProjectItem ReplaceParameters="true"  TargetFileName="My Project\Settings.Designer.vb">Settings.Designer.vb</ProjectItem>
+      <Folder Name="SharePointRoot"></Folder>
+    </Project>
+  </TemplateContent>
+  <WizardExtension>
+    <Assembly>WSPBuilderTemplates, Version=1.0.0.0, Culture=neutral, PublicKeyToken=2b778c59697d7d9e</Assembly>
+    <FullClassName>WSPBuilderTemplates.ProjectWizard</FullClassName>
+  </WizardExtension>
+</VSTemplate>

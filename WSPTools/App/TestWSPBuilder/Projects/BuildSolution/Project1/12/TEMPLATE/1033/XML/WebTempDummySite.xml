@@ -1,0 +1,6 @@
+﻿<?xml version="1.0"?>
+<Templates xmlns:ows="Microsoft SharePoint">
+  <Template Name="DummySite" ID="20071212" >
+    <Configuration ID="0" Title="DummySite" Description="" Hidden="FALSE" ImageUrl="/_layouts/images/stsprev.png" DisplayCategory="Demo" />
+  </Template>
+</Templates>

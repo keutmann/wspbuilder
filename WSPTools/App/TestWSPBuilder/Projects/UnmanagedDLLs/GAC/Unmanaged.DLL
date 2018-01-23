@@ -1,0 +1,10 @@
+/* Program : TestWSPBuilder
+ * Created by: Carsten Keutmann
+ * Date : 2007
+ *  
+ * The WSPBuilder comes under GNU GENERAL PUBLIC LICENSE (GPL).
+ * 
+ * This test requires NUnit 
+ * This is a unmanaged Dll.
+ * Its should be included into WSP builder.
+ */
