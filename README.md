@@ -1,4 +1,5 @@
 #Project Description
+
 A SharePoint Solution Package (WSP) creation tool for WSS 3.0 & MOSS 2007
 
 No more manually creating the manifest.xml file.
